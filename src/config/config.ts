@@ -23,17 +23,17 @@ export interface Config {
 
 export const configData: Config = {
 	siteTitle:
-		'Mizu Light Astro Theme | Modern SaaS & Startup Landing Page Template for Fast Product Launches by Oxygenna',
+		'Automatisation et IA pour PME | Services de consultation et développement sur mesure | Québec',
 	siteDescription:
-		'Launch your next big idea with Mizu Light — a sleek, responsive Astro theme built for SaaS startups and tech companies. Streamline onboarding, showcase features beautifully, and convert visitors into users faster.',
+		'Optimisez vos processus avec l\'automatisation et l\'IA. Services de consultation et développement sur mesure pour PME à Québec. ROI mesurable, solutions pragmatiques.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo-light.svg',
 		srcDark: '/logo-dark.svg',
-		alt: 'Mizu Light logo'
+		alt: 'Logo'
 	},
 	canonical: true,
 	noindex: false,
-	mode: 'auto',
+	mode: 'light',
 	scrollAnimations: true
 }

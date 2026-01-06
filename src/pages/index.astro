@@ -1,76 +1,325 @@
 ---
 // Home Page
 // ------------
-// Description: The home page is a page that displays the most important information.
+// Description: Page d'accueil pour services d'automatisation et IA pour PME
 
 // Components
 // - Layout
 import Layout from '../layouts/Layout.astro'
 
-// - Blocks
-import Hero from '../components/blocks/hero/CenteredHeroCTA.astro'
-import Brand from '../components/blocks/brand/Marquee.astro'
-import Features from '../components/blocks/features/MasonryGrid.astro'
-import ScrollSpySteps from '../components/blocks/onboarding/Steps.astro'
-import TestimonialMasonry from '../components/blocks/testimonials/TestimonialMasonry.astro'
-import Faq from '../components/blocks/faq/StickyFaq.astro'
-import CTA from '../components/blocks/cta/CTAPrimary.astro'
+// - UI
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import Button from '../components/ui/Button.astro'
+import Header from '../components/ui/Header.astro'
 
 // Content
 // - SEO
 const SEO = {
 	title:
-		'Mizu Light Astro Theme | Modern SaaS & Startup Landing Page Template for Fast Product Launches by Oxygenna',
+		'Automatisation et IA pour PME | Services de consultation et développement sur mesure | Québec',
 	description:
-		'Launch your next big idea with Mizu Light — a sleek, responsive Astro theme built for SaaS startups and tech companies. Streamline onboarding, showcase features beautifully, and convert visitors into users faster.'
-}
-// - Hero data
-const heroData = {
-	title: 'Launch smarter Start faster',
-	subtitle: 'build for the future',
-	buttonLink: '/pricing',
-	buttonText: 'Try it for free!',
-	text: 'Let AI handle the heavy lifting — from data insights to launch strategies — so you can focus on creating products that customers love'
-}
-// - Brand data
-const brandData = {
-	title: 'Built in collaboration with'
-}
-// - Testimonial data
-const testimonialData = {
-	title: 'Loved by early adopters everywhere',
-	subtitle: 'What other are saying'
-}
-// - FAQ data
-const faqData = {
-	title: 'Frequently Asked Questions',
-	subtitle: 'Everything you need to know'
-}
-// - CTA data
-const ctaData = {
-	title: 'Launch your next big idea today',
-	text: 'Join creators, teams, and startups already turning their ideas into reality. Get started in minutes and see how simple launching can be when everything works together seamlessly.',
-	buttonLink: '/pricing',
-	buttonText: 'Try it for free!'
+		'Optimisez vos processus avec l\'automatisation et l\'IA. Services de consultation et développement sur mesure pour PME à Québec. ROI mesurable, solutions pragmatiques.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero
-		title={heroData.title}
-		subtitle={heroData.subtitle}
-		buttonLink={heroData.buttonLink}
-		buttonText={heroData.buttonText}
-	/>
-	<Brand title={brandData.title} />
-	<Features />
-	<ScrollSpySteps />
-	<TestimonialMasonry title={testimonialData.title} subtitle={testimonialData.subtitle} />
-	<Faq subtitle={faqData.subtitle} title={faqData.title} />
-	<CTA
-		title={ctaData.title}
-		text={ctaData.text}
-		buttonLink={ctaData.buttonLink}
-		buttonText={ctaData.buttonText}
-	/>
+	<!-- Hero Section -->
+	<Section classes="hero-section" spacerTop={true} spacerBottom={false}>
+		<Row classes="gap-y-0!">
+			<Col span="12" classes="pt-16 lg:pt-24 pb-12 lg:pb-16">
+				<Header
+					title="Automatisez vos processus. Intégrez l'IA."
+					subtitle="Solutions pragmatiques pour PME"
+					classes="text-center"
+					titleWidth="mx-auto max-w-4xl"
+				/>
+				<p class="text-center text-xl lg:text-2xl text-neutral-600 dark:text-neutral-300 mx-auto max-w-3xl mb-10 mt-6 font-light">
+					Réduisez le travail manuel, améliorez la fiabilité et optimisez vos flux internes avec des solutions d'automatisation et d'IA conçues pour votre entreprise.
+				</p>
+				<div class="flex flex-col lg:flex-row justify-center gap-4 items-center">
+					<Button link="#contact" style="primary" classes="w-full lg:w-auto">Réserver un appel</Button>
+					<Button link="#cas-usage" style="neutral" classes="w-full lg:w-auto">Voir des cas d'usage</Button>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Problems Section -->
+	<Section id="problemes" spacerTop={true} spacerBottom={true}>
+		<Row>
+			<Col span="12" classes="mb-12">
+				<h2 class="text-center text-4xl lg:text-5xl font-medium mb-4">Les défis que vous rencontrez</h2>
+				<p class="text-center text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+					Trop de temps perdu sur des tâches répétitives qui pourraient être automatisées
+				</p>
+			</Col>
+		</Row>
+		<Row classes="gap-y-8">
+			<Col span="4" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 h-full">
+					<h3 class="text-2xl font-medium mb-4">Processus manuels inefficaces</h3>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Vos équipes passent des heures sur des tâches répétitives : saisie de données, transfert d'information entre systèmes, génération de rapports.
+					</p>
+				</div>
+			</Col>
+			<Col span="4" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 h-full">
+					<h3 class="text-2xl font-medium mb-4">Erreurs humaines coûteuses</h3>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Les processus manuels entraînent des erreurs de saisie, des oublis et des incohérences qui affectent la qualité de vos opérations.
+					</p>
+				</div>
+			</Col>
+			<Col span="4" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 h-full">
+					<h3 class="text-2xl font-medium mb-4">Manque de visibilité</h3>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Difficile d'obtenir une vue d'ensemble en temps réel de vos opérations sans passer des heures à compiler des données de sources multiples.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Services Section -->
+	<Section id="services" type="alt" spacerTop={true} spacerBottom={true}>
+		<Row>
+			<Col span="12" classes="mb-12">
+				<h2 class="text-center text-4xl lg:text-5xl font-medium mb-4">Nos services</h2>
+				<p class="text-center text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+					Des solutions concrètes adaptées à vos besoins
+				</p>
+			</Col>
+		</Row>
+		<Row classes="gap-y-8">
+			<Col span="6" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-10 h-full">
+					<h3 class="text-3xl font-medium mb-4">Optimisation de flux</h3>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-6">
+						Nous analysons vos processus existants pour identifier les goulots d'étranglement et les opportunités d'amélioration. Notre approche méthodique vous garantit des gains mesurables.
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Cartographie des processus actuels</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Identification des opportunités d'automatisation</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Recommandations priorisées par ROI</span>
+						</li>
+					</ul>
+				</div>
+			</Col>
+			<Col span="6" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-10 h-full">
+					<h3 class="text-3xl font-medium mb-4">Automatisation</h3>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-6">
+						Nous automatisons vos tâches répétitives pour libérer du temps et réduire les erreurs. De la simple intégration entre deux systèmes aux flux de travail complexes.
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Intégration de systèmes et API</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Automatisation de workflows</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Scripts et outils sur mesure</span>
+						</li>
+					</ul>
+				</div>
+			</Col>
+			<Col span="6" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-10 h-full">
+					<h3 class="text-3xl font-medium mb-4">Intégration d'IA</h3>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-6">
+						Nous intégrons l'intelligence artificielle là où elle apporte une réelle valeur : analyse de documents, extraction de données, classification automatique, et plus.
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Traitement automatique de documents</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Extraction et structuration de données</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Assistants intelligents spécialisés</span>
+						</li>
+					</ul>
+				</div>
+			</Col>
+			<Col span="6" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-10 h-full">
+					<h3 class="text-3xl font-medium mb-4">Consultation et développement sur mesure</h3>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-6">
+						Chaque entreprise est unique. Nous développons des solutions personnalisées qui s'intègrent parfaitement à votre infrastructure et répondent précisément à vos besoins.
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Analyse de besoins approfondie</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Développement d'outils sur mesure</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-primary-500 mr-2">•</span>
+							<span class="text-neutral-700 dark:text-neutral-300">Accompagnement et formation</span>
+						</li>
+					</ul>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Use Cases Section -->
+	<Section id="cas-usage" spacerTop={true} spacerBottom={true}>
+		<Row>
+			<Col span="12" classes="mb-12">
+				<h2 class="text-center text-4xl lg:text-5xl font-medium mb-4">Exemples concrets</h2>
+				<p class="text-center text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+					Comment nos clients utilisent l'automatisation et l'IA
+				</p>
+			</Col>
+		</Row>
+		<Row classes="gap-y-6">
+			<Col span="6" spanMobile="12">
+				<div class="border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 bg-neutral-50 dark:bg-neutral-800">
+					<h4 class="text-xl font-medium mb-3">Automatisation de la facturation</h4>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-4">
+						Un distributeur passe de 8 heures par semaine à générer des factures à un processus entièrement automatisé. Les données sont extraites des commandes, les factures sont générées et envoyées automatiquement.
+					</p>
+					<p class="text-sm text-primary-600 font-medium">
+						Impact : 400+ heures économisées par année
+					</p>
+				</div>
+			</Col>
+			<Col span="6" spanMobile="12">
+				<div class="border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 bg-neutral-50 dark:bg-neutral-800">
+					<h4 class="text-xl font-medium mb-3">Extraction de données de documents</h4>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-4">
+						Une firme de comptabilité utilise l'IA pour extraire automatiquement les données des reçus et factures. Fini la saisie manuelle : les informations sont structurées et importées directement dans leur système.
+					</p>
+					<p class="text-sm text-primary-600 font-medium">
+						Impact : 70% de réduction du temps de traitement
+					</p>
+				</div>
+			</Col>
+			<Col span="6" spanMobile="12">
+				<div class="border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 bg-neutral-50 dark:bg-neutral-800">
+					<h4 class="text-xl font-medium mb-3">Intégration de systèmes</h4>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-4">
+						Un détaillant synchronise automatiquement son inventaire entre sa boutique en ligne, son système de point de vente et son logiciel de gestion. Plus de mises à jour manuelles ni d'écarts d'inventaire.
+					</p>
+					<p class="text-sm text-primary-600 font-medium">
+						Impact : Élimination des erreurs d'inventaire
+					</p>
+				</div>
+			</Col>
+			<Col span="6" spanMobile="12">
+				<div class="border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 bg-neutral-50 dark:bg-neutral-800">
+					<h4 class="text-xl font-medium mb-3">Rapports automatisés</h4>
+					<p class="text-neutral-600 dark:text-neutral-300 mb-4">
+						Une entreprise de services génère automatiquement ses rapports hebdomadaires de performance en compilant les données de multiples sources. Les rapports sont envoyés aux parties prenantes chaque lundi matin.
+					</p>
+					<p class="text-sm text-primary-600 font-medium">
+						Impact : Visibilité en temps réel sur les opérations
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Methodology Section -->
+	<Section id="methodologie" type="alt" spacerTop={true} spacerBottom={true}>
+		<Row>
+			<Col span="12" classes="mb-12">
+				<h2 class="text-center text-4xl lg:text-5xl font-medium mb-4">Notre approche</h2>
+				<p class="text-center text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+					Un processus clair et structuré pour garantir votre succès
+				</p>
+			</Col>
+		</Row>
+		<Row classes="gap-y-12 lg:gap-y-0">
+			<Col span="3" spanMobile="12">
+				<div class="text-center lg:text-left lg:pl-6 lg:pt-6">
+					<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 text-2xl font-bold mb-4">
+						1
+					</div>
+					<h4 class="text-xl font-medium mb-3">Découverte</h4>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Nous commençons par comprendre vos processus actuels, vos défis et vos objectifs. Un appel de découverte gratuit nous permet d'identifier rapidement les opportunités.
+					</p>
+				</div>
+			</Col>
+			<Col span="3" spanMobile="12">
+				<div class="text-center lg:text-left lg:pt-6">
+					<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 text-2xl font-bold mb-4">
+						2
+					</div>
+					<h4 class="text-xl font-medium mb-3">Analyse</h4>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Nous analysons en profondeur vos processus et proposons des solutions concrètes avec une estimation du ROI. Vous savez exactement à quoi vous attendre.
+					</p>
+				</div>
+			</Col>
+			<Col span="3" spanMobile="12">
+				<div class="text-center lg:text-left lg:pt-6">
+					<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 text-2xl font-bold mb-4">
+						3
+					</div>
+					<h4 class="text-xl font-medium mb-3">Mise en œuvre</h4>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Nous développons et déployons la solution de manière itérative. Vous voyez les résultats rapidement et pouvez ajuster en cours de route.
+					</p>
+				</div>
+			</Col>
+			<Col span="3" spanMobile="12">
+				<div class="text-center lg:text-left lg:pt-6">
+					<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 text-2xl font-bold mb-4">
+						4
+					</div>
+					<h4 class="text-xl font-medium mb-3">Accompagnement</h4>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Nous formons vos équipes et assurons un suivi pour garantir l'adoption et l'optimisation continue de vos solutions.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Final CTA Section -->
+	<Section id="contact" spacerTop={true} spacerBottom={true}>
+		<Row>
+			<Col span="12">
+				<div class="bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-12 lg:p-16 text-center">
+					<h2 class="text-4xl lg:text-5xl font-medium mb-6">Prêt à optimiser vos opérations ?</h2>
+					<p class="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto mb-10">
+						Réservez un appel de découverte gratuit de 30 minutes. Nous analyserons ensemble vos besoins et identifierons les opportunités d'automatisation qui auront le plus d'impact sur votre entreprise.
+					</p>
+					<div class="flex flex-col lg:flex-row justify-center gap-4 items-center">
+						<Button link="mailto:contact@example.com" style="primary" classes="w-full lg:w-auto">Réserver un appel</Button>
+						<Button link="mailto:contact@example.com" style="white" classes="w-full lg:w-auto">Contact par courriel</Button>
+					</div>
+					<p class="text-sm text-neutral-500 dark:text-neutral-400 mt-8">
+						Basé à Québec • Services pour PME du Québec
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</Section>
 </Layout>

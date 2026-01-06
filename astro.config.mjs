@@ -10,7 +10,12 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mizu-theme.netlify.app/",
+  site: "https://example.com/",
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+    },
+  },
   integrations: [
     icon(),
     sitemap(),
