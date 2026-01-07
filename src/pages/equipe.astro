@@ -1,0 +1,164 @@
+---
+// Notre équipe Page
+// ------------
+// Description: Page de présentation de l'équipe
+
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+
+// - UI
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import Header from '../components/ui/Header.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Notre équipe | Experts en automatisation et IA | Québec',
+	description:
+		'Découvrez l\'équipe d\'experts en automatisation et intelligence artificielle qui accompagne les PME du Québec dans leur transformation numérique.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<!-- Hero Section -->
+	<Section classes="hero-section" spacerTop={true} spacerBottom={false}>
+		<Row classes="gap-y-0!">
+			<Col span="12" classes="pt-16 lg:pt-24 pb-12 lg:pb-16">
+				<Header
+					title="Notre équipe"
+					subtitle="Experts en automatisation et IA"
+					classes="text-center"
+					titleWidth="mx-auto max-w-4xl"
+				/>
+				<p class="text-center text-xl lg:text-2xl text-neutral-600 dark:text-neutral-300 mx-auto max-w-3xl mb-10 mt-6 font-light">
+					Une expertise technique de pointe au service de vos projets d'automatisation et d'intelligence artificielle.
+				</p>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Team Section -->
+	<Section spacerTop={true} spacerBottom={true}>
+		<Row classes="gap-y-12">
+			<!-- Francis -->
+			<Col span="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+					<Row classes="gap-y-8 items-center">
+						<Col span="4" spanMobile="12">
+							<div class="p-8 lg:p-12">
+								<img
+									src="/Francis_photo_jpg.jpg"
+									alt="Francis"
+									class="w-full h-auto rounded-lg shadow-lg"
+								/>
+							</div>
+						</Col>
+						<Col span="8" spanMobile="12">
+							<div class="p-8 lg:p-12 lg:pl-0">
+								<h2 class="text-3xl lg:text-4xl font-medium mb-2">Francis</h2>
+								<p class="text-xl text-primary-600 dark:text-primary-400 mb-6 font-medium">
+									Ingénieur et fondateur
+								</p>
+
+								<div class="space-y-4 mb-8">
+									<p class="text-lg text-neutral-700 dark:text-neutral-300">
+										Avec une expertise unique combinant génie mécanique et développement logiciel, Francis accompagne les PME dans leur transformation numérique en proposant des solutions d'automatisation et d'IA adaptées à leurs besoins réels.
+									</p>
+								</div>
+
+								<h3 class="text-xl font-medium mb-4 text-neutral-900 dark:text-neutral-100">
+									Qualifications et expertise
+								</h3>
+								<ul class="space-y-3 mb-8">
+									<li class="flex items-start">
+										<span class="text-primary-500 mr-3 mt-1">•</span>
+										<span class="text-neutral-700 dark:text-neutral-300">
+											<strong>Membre de l'Ordre des Ingénieurs du Québec (OIQ)</strong>
+										</span>
+									</li>
+									<li class="flex items-start">
+										<span class="text-primary-500 mr-3 mt-1">•</span>
+										<span class="text-neutral-700 dark:text-neutral-300">
+											<strong>5 ans d'expérience en automatisation industrielle</strong> auprès de grands fabricants d'automobiles et d'avions, au Québec et aux États-Unis
+										</span>
+									</li>
+									<li class="flex items-start">
+										<span class="text-primary-500 mr-3 mt-1">•</span>
+										<span class="text-neutral-700 dark:text-neutral-300">
+											<strong>Expertise combinée</strong> en développement logiciel et en génie mécanique
+										</span>
+									</li>
+									<li class="flex items-start">
+										<span class="text-primary-500 mr-3 mt-1">•</span>
+										<span class="text-neutral-700 dark:text-neutral-300">
+											<strong>Diplômé de l'Université Laval</strong> en génie
+										</span>
+									</li>
+									<li class="flex items-start">
+										<span class="text-primary-500 mr-3 mt-1">•</span>
+										<span class="text-neutral-700 dark:text-neutral-300">
+											Expérience dans l'<strong>optimisation de processus complexes</strong> et l'intégration de systèmes
+										</span>
+									</li>
+									<li class="flex items-start">
+										<span class="text-primary-500 mr-3 mt-1">•</span>
+										<span class="text-neutral-700 dark:text-neutral-300">
+											Spécialiste de l'<strong>automatisation de workflows</strong> et de l'intégration d'intelligence artificielle
+										</span>
+									</li>
+								</ul>
+
+								<div class="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-lg p-6">
+									<p class="text-neutral-700 dark:text-neutral-300 italic">
+										« Mon objectif est de rendre l'automatisation et l'IA accessibles aux PME du Québec. Chaque projet est une opportunité de créer des solutions pragmatiques qui génèrent un retour sur investissement mesurable. »
+									</p>
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Values Section -->
+	<Section type="alt" spacerTop={true} spacerBottom={true}>
+		<Row>
+			<Col span="12" classes="mb-12">
+				<h2 class="text-center text-4xl lg:text-5xl font-medium mb-4">Notre approche</h2>
+				<p class="text-center text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+					Des valeurs qui guident notre travail au quotidien
+				</p>
+			</Col>
+		</Row>
+		<Row classes="gap-y-8">
+			<Col span="4" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 h-full">
+					<h3 class="text-2xl font-medium mb-4">Pragmatisme</h3>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Nous privilégions les solutions concrètes qui apportent une valeur réelle et mesurable à votre entreprise, sans complexité inutile.
+					</p>
+				</div>
+			</Col>
+			<Col span="4" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 h-full">
+					<h3 class="text-2xl font-medium mb-4">Expertise technique</h3>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Une expérience éprouvée dans l'industrie combinée à une veille technologique constante pour vous offrir les meilleures solutions.
+					</p>
+				</div>
+			</Col>
+			<Col span="4" spanMobile="12">
+				<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8 h-full">
+					<h3 class="text-2xl font-medium mb-4">Accompagnement personnalisé</h3>
+					<p class="text-neutral-600 dark:text-neutral-300">
+						Chaque entreprise est unique. Nous prenons le temps de comprendre vos besoins pour développer des solutions sur mesure.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</Section>
+</Layout>

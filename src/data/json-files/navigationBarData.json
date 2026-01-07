@@ -7,7 +7,8 @@
 	"navItems": [
 		{ "name": "Accueil", "link": "/" },
 		{ "name": "Services", "link": "#services" },
-		{ "name": "Cas d'usage", "link": "#cas-usage" }
+		{ "name": "Cas d'usage", "link": "#cas-usage" },
+		{ "name": "Notre équipe", "link": "/equipe" }
 	],
 	"navActions": [{ "name": "Réserver un appel", "link": "#contact" }]
 }
