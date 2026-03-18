@@ -10,6 +10,7 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "server",
   site: "https://example.com/",
   image: {
     service: {

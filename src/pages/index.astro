@@ -1,6 +1,7 @@
 ---
 // Home Page
 import Layout from '../layouts/Layout.astro'
+import ChatWidget from '../components/ChatWidget.tsx'
 
 const SEO = {
 	title: 'Automatisation et IA pour PME | Lean Flow Systems | Québec',
@@ -17,20 +18,11 @@ const SEO = {
 			<section class="lf-section">
 				<div class="lf-hero">
 
-					<!-- Left: 60% -->
-					<div class="lf-card lf-hero-card">
-						<div class="lf-eyebrow">Solutions sur mesure pour PME · Québec</div>
-						<h2 style="margin-top: 12px;">Automatisez vos processus. Intégrez l'IA.</h2>
-						<p class="lf-lead">
-							Lean Flow Systems conçoit les flux d'automatisation, intégrations d'IA et outils internes qui font avancer vos opérations — sans forcer une migration complète de votre stack.
-						</p>
-						<div class="lf-proof-strip">
-							<span class="lf-proof-pill">Adapté à votre stack existant, pas l'inverse</span>
-							<span class="lf-proof-pill">ROI mesurable dès les premières semaines</span>
-						</div>
-						<div class="lf-action-row">
-							<a href="#contact" class="lf-btn primary">Réserver un appel</a>
-							<a href="#cas-usage" class="lf-btn secondary">Voir des cas d'usage</a>
+					<!-- Left: 60% — AI chat -->
+					<div class="lf-card lf-hero-card" style="display: flex; flex-direction: column; gap: 20px;">
+						<h2 style="margin: 0;">Parlez-nous de vos besoins en automatisation!</h2>
+						<div style="border-radius: 18px; overflow: hidden; border: 1px solid var(--lf-line);">
+							<ChatWidget client:load />
 						</div>
 					</div>
 
@@ -66,47 +58,6 @@ const SEO = {
 				</div>
 			</section>
 
-			<!-- ── Problèmes ── -->
-			<section class="lf-section">
-				<div class="lf-three-col">
-					<article class="lf-card">
-						<div class="lf-eyebrow">Où les opérations brisent</div>
-						<h2>Processus manuels inefficaces</h2>
-						<p>Vos équipes passent des heures sur des tâches répétitives : saisie de données, transferts entre systèmes, génération de rapports manuels.</p>
-					</article>
-					<article class="lf-card">
-						<div class="lf-eyebrow">Où les opérations brisent</div>
-						<h2>Erreurs humaines coûteuses</h2>
-						<p>Les processus manuels entraînent des erreurs de saisie, des oublis et des incohérences qui affectent la fiabilité de vos opérations.</p>
-					</article>
-					<article class="lf-card">
-						<div class="lf-eyebrow">Où les opérations brisent</div>
-						<h2>Manque de visibilité</h2>
-						<p>Difficile d'obtenir une vue d'ensemble en temps réel sans passer des heures à compiler des données de multiples sources.</p>
-					</article>
-				</div>
-			</section>
-
-			<!-- ── Modèle de solution ── -->
-			<section class="lf-section lf-card">
-				<div class="lf-eyebrow">Modèle de solution</div>
-				<h2>Gardez vos outils. Améliorez les flux autour.</h2>
-				<div class="lf-three-col" style="margin-top: 20px;">
-					<div>
-						<h3>Diagnostiquer le flux réel</h3>
-						<p>Cartographier la prise en charge, les transferts, les goulots et les lacunes — avant de toucher quoi que ce soit.</p>
-					</div>
-					<div>
-						<h3>Ajouter la bonne couche sur mesure</h3>
-						<p>Automatisation, tableaux de bord ou modules internes ciblés selon le point de défaillance réel.</p>
-					</div>
-					<div>
-						<h3>Connecter à votre stack existant</h3>
-						<p>CRM, courriel, tableurs, ERP et outils admin restent en place pendant que les flux autour s'améliorent.</p>
-					</div>
-				</div>
-			</section>
-
 			<!-- ── Ce que nous construisons ── -->
 			<section class="lf-section" id="services">
 				<div class="lf-eyebrow" style="margin-bottom: 18px;">Nos services</div>
@@ -132,6 +83,45 @@ const SEO = {
 						<h2 style="margin: 0;">Intégration d'IA</h2>
 						<p>Traitement automatique de documents, extraction et structuration de données, assistants intelligents spécialisés — l'IA là où elle crée une vraie valeur opérationnelle.</p>
 					</article>
+				</div>
+			</section>
+
+			<!-- ── Problèmes ── -->
+			<section class="lf-section">
+				<div class="lf-eyebrow" style="margin-bottom: 18px;">Où les opérations brisent</div>
+				<div class="lf-three-col">
+					<article class="lf-card">
+						<h2>Processus manuels inefficaces</h2>
+						<p>Vos équipes passent des heures sur des tâches répétitives : saisie de données, transferts entre systèmes, génération de rapports manuels.</p>
+					</article>
+					<article class="lf-card">
+						<h2>Erreurs humaines coûteuses</h2>
+						<p>Les processus manuels entraînent des erreurs de saisie, des oublis et des incohérences qui affectent la fiabilité de vos opérations.</p>
+					</article>
+					<article class="lf-card">
+						<h2>Manque de visibilité</h2>
+						<p>Difficile d'obtenir une vue d'ensemble en temps réel sans passer des heures à compiler des données de multiples sources.</p>
+					</article>
+				</div>
+			</section>
+
+			<!-- ── Modèle de solution ── -->
+			<section class="lf-section lf-card">
+				<div class="lf-eyebrow">Modèle de solution</div>
+				<h2>Gardez vos outils. Améliorez les flux autour.</h2>
+				<div class="lf-three-col" style="margin-top: 20px;">
+					<div>
+						<h3>Diagnostiquer le flux réel</h3>
+						<p>Cartographier la prise en charge, les transferts, les goulots et les lacunes — avant de toucher quoi que ce soit.</p>
+					</div>
+					<div>
+						<h3>Ajouter la bonne couche sur mesure</h3>
+						<p>Automatisation, tableaux de bord ou modules internes ciblés selon le point de défaillance réel.</p>
+					</div>
+					<div>
+						<h3>Connecter à votre stack existant</h3>
+						<p>CRM, courriel, tableurs, ERP et outils admin restent en place pendant que les flux autour s'améliorent.</p>
+					</div>
 				</div>
 			</section>
 
@@ -171,20 +161,20 @@ const SEO = {
 				<div class="lf-eyebrow">Comment les mandats débutent</div>
 				<div class="lf-four-col" style="margin-top: 20px;">
 					<div>
-						<h3>01 · Découverte</h3>
-						<p>Appel gratuit de 30 min pour comprendre vos processus, vos défis et identifier les opportunités d'amélioration les plus impactantes.</p>
+						<h3 class="lf-step-title">01 · Découverte</h3>
+						<p class="lf-step-body">Appel gratuit de 30 min pour comprendre vos processus, vos défis et identifier les opportunités d'amélioration les plus impactantes.</p>
 					</div>
 					<div>
-						<h3>02 · Analyse</h3>
-						<p>Analyse approfondie avec proposition de solutions concrètes et estimation du ROI. Vous savez exactement à quoi vous attendre avant de commencer.</p>
+						<h3 class="lf-step-title">02 · Analyse</h3>
+						<p class="lf-step-body">Analyse approfondie avec proposition de solutions concrètes et estimation du ROI. Vous savez exactement à quoi vous attendre avant de commencer.</p>
 					</div>
 					<div>
-						<h3>03 · Mise en œuvre</h3>
-						<p>Développement et déploiement itératif. Vous voyez les résultats rapidement et pouvez ajuster en cours de route.</p>
+						<h3 class="lf-step-title">03 · Mise en œuvre</h3>
+						<p class="lf-step-body">Développement et déploiement itératif. Vous voyez les résultats rapidement et pouvez ajuster en cours de route.</p>
 					</div>
 					<div>
-						<h3>04 · Accompagnement</h3>
-						<p>Formation de vos équipes et suivi continu pour garantir l'adoption et l'optimisation des solutions déployées.</p>
+						<h3 class="lf-step-title" style="white-space: nowrap;">04 · Accompagnement</h3>
+						<p class="lf-step-body">Formation de vos équipes et suivi continu pour garantir l'adoption et l'optimisation des solutions déployées.</p>
 					</div>
 				</div>
 			</section>
