@@ -5,7 +5,8 @@
       "Bash(find C:UsersFrancisDocumentsGitHubSite_web2src -type f -name config.ts -o -name config.js -o -name navigationBar* -o -name footerNavigation*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(python3:*)"
     ]
   }
 }
