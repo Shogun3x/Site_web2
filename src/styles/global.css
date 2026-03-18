@@ -121,6 +121,7 @@
 /* Layout rules */
 html {
 	@apply scroll-smooth antialiased;
+	scroll-padding-top: 6.5rem;
 }
 body {
 	@apply font-body text-base leading-7 text-neutral-700 selection:bg-neutral-950 selection:text-neutral-50 has-[.header\_\_menu--open]:overflow-hidden lg:has-[.header\_\_menu--open]:overflow-auto dark:text-neutral-200 dark:selection:bg-neutral-50 dark:selection:text-neutral-950;
@@ -468,6 +469,22 @@ html.disable-transitions *::after {
 .lf-cta-band p, .lf-cta-band .lf-eyebrow { color: rgba(255, 255, 255, 0.8); }
 .lf-cta-band .lf-btn.primary { background: white; color: var(--lf-ink); border-color: white; }
 .lf-cta-band .lf-btn.secondary { border-color: rgba(255, 255, 255, 0.45); color: white; }
+
+/* Service image */
+.lf-service-img-wrap {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--lf-line);
+  background: linear-gradient(180deg, #fcfaf6 0%, #f2ebe2 100%);
+  aspect-ratio: 16 / 9;
+}
+.lf-service-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
 /* Responsive */
 @media (max-width: 900px) {
