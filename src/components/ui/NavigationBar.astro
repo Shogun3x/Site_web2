@@ -145,10 +145,15 @@ const savedNavActions = navActions.map((action: any) => ({
 		@apply font-body relative flex items-center gap-2 text-2xl;
 	}
 	.header__nav {
-		@apply relative flex h-22 items-stretch justify-between bg-white px-6 font-medium lg:h-[6.25rem] lg:px-8 dark:bg-neutral-950;
+		@apply relative flex h-22 items-stretch justify-between px-6 font-medium lg:h-[6.25rem] lg:px-8 dark:bg-neutral-950;
+		background: rgba(247, 243, 238, 0.88);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-bottom: 1px solid rgba(216, 208, 196, 0.8);
 	}
 	.header__menu {
-		@apply invisible absolute top-0 left-0 z-[-1] m-0 mt-22 h-[calc(100vh-5.5rem)] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white px-6 pt-6 pb-28 text-lg leading-none font-medium opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:mx-auto lg:mt-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:border-none lg:bg-none lg:px-0 lg:pt-0 lg:pb-0 lg:opacity-100 dark:bg-neutral-950;
+		@apply invisible absolute top-0 left-0 z-[-1] m-0 mt-22 h-[calc(100vh-5.5rem)] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain px-6 pt-6 pb-28 text-lg leading-none font-medium opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:mx-auto lg:mt-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:border-none lg:bg-none lg:px-0 lg:pt-0 lg:pb-0 lg:opacity-100 dark:bg-neutral-950;
+		background: rgba(247, 243, 238, 0.97);
 	}
 	.menu--open {
 		@apply visible opacity-100;
@@ -163,10 +168,10 @@ const savedNavActions = navActions.map((action: any) => ({
 		@apply h-4 w-4 transition-transform group-[.open]/menuItem:rotate-45;
 	}
 	.header__submenu {
-		@apply animate-dropdown top-full right-0 mb-0 hidden border border-neutral-200 bg-[url('/bgs/stripe-gray-light.svg')] bg-size-[38px] bg-fixed p-4 backdrop-blur-[2px] group-[.open]/menuItem:flex lg:absolute lg:divide-x lg:border-t-0 lg:bg-white/80 dark:border-neutral-700 dark:bg-[url('/bgs/stripe-gray-dark.svg')] lg:dark:bg-neutral-950/80;
+		@apply animate-dropdown top-full right-0 mb-0 hidden border border-neutral-300 bg-neutral-200 p-4 backdrop-blur-[2px] group-[.open]/menuItem:flex lg:absolute lg:divide-x lg:border-t-0 lg:bg-neutral-100/95 dark:border-neutral-700 dark:bg-neutral-900 lg:dark:bg-neutral-950/90;
 	}
 	.header__submenu-inner {
-		@apply relative flex w-full flex-col lg:bg-white lg:dark:bg-neutral-950;
+		@apply relative flex w-full flex-col lg:bg-neutral-100 lg:dark:bg-neutral-950;
 	}
 	.header__submenu-item {
 		@apply m-0 hidden p-0 group-[.open]/menuItem:block lg:group-[.open]/menuItem:block;
@@ -193,7 +198,7 @@ const savedNavActions = navActions.map((action: any) => ({
 		@apply w-1/2 origin-top-left translate-y-2 group-[.toggle--open]/toggle:w-0;
 	}
 	.header__actions {
-		@apply invisible fixed right-0 bottom-0 z-50 order-4 flex w-full items-center border-t border-neutral-200 bg-white px-6 py-4 opacity-0 transition-opacity lg:visible lg:static lg:z-0 lg:w-auto lg:border-t-0 lg:bg-transparent lg:bg-none lg:p-0 lg:opacity-100 dark:border-neutral-700 dark:bg-neutral-950 lg:dark:bg-transparent dark:lg:bg-none;
+		@apply invisible fixed right-0 bottom-0 z-50 order-4 flex w-full items-center border-t border-neutral-300 bg-neutral-200 px-6 py-4 opacity-0 transition-opacity lg:visible lg:static lg:z-0 lg:w-auto lg:border-t-0 lg:bg-transparent lg:bg-none lg:p-0 lg:opacity-100 dark:border-neutral-700 dark:bg-neutral-950 lg:dark:bg-transparent dark:lg:bg-none;
 	}
 	.header__action {
 		@apply self-center;

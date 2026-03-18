@@ -114,13 +114,16 @@ const { logo, footerAbout, footerColumns, copyright } = await getFooterNavigatio
 	}
 
 	.footer__logo {
-		@apply flex h-full w-full items-center justify-center border-b border-neutral-200 bg-white lg:border-r dark:border-neutral-700 dark:bg-neutral-950 [&_img]:max-w-48 lg:[&_img]:max-w-full;
+		@apply flex h-full w-full items-center justify-center border-b border-neutral-300 lg:border-r dark:border-neutral-700 dark:bg-neutral-950 [&_img]:max-w-48 lg:[&_img]:max-w-full;
+		background: rgba(255, 253, 250, 0.7);
 	}
 	.footer__content {
-		@apply flex flex-col bg-white bg-[url('/bgs/dot-gray-light.svg')] bg-size-[18px] bg-fixed lg:border-l lg:border-neutral-200 dark:bg-neutral-950 dark:bg-[url('/bgs/dot-gray-dark.svg')] lg:dark:border-neutral-700;
+		@apply flex flex-col lg:border-l lg:border-neutral-300 dark:bg-neutral-950 lg:dark:border-neutral-700;
+		background: rgba(255, 253, 250, 0.7);
 	}
 	.footer__navigation {
-		@apply relative flex w-full flex-row flex-wrap bg-white dark:bg-neutral-950;
+		@apply relative flex w-full flex-row flex-wrap dark:bg-neutral-950;
+		background: transparent;
 	}
 	.footer__about {
 		@apply p-8 text-center lg:text-left;

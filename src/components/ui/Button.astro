@@ -57,7 +57,7 @@ const isAbsoluteURL = (url: string) => /^https?:\/\//i.test(url)
 <style>
 	@reference '../../styles/global.css';
 	.button {
-		@apply relative inline-flex cursor-pointer items-center justify-center gap-2 bg-neutral-950 font-medium text-nowrap text-white transition duration-300 hover:bg-neutral-900 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:shadow-none dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-50;
+		@apply relative inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-neutral-950 font-medium text-nowrap text-white transition duration-300 hover:bg-neutral-800 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:shadow-none;
 	}
 	.button--lg {
 		@apply h-14 px-8;
@@ -69,12 +69,15 @@ const isAbsoluteURL = (url: string) => /^https?:\/\//i.test(url)
 		@apply h-10 px-4 text-sm;
 	}
 	.button--primary {
-		@apply bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-600 text-black;
+		@apply bg-neutral-950 text-white hover:bg-neutral-800;
+	}
+	.button--neutral {
+		@apply bg-transparent border border-neutral-300 text-neutral-700 hover:border-neutral-500 hover:bg-neutral-100;
 	}
 	.button--white {
-		@apply dark:hover:bg-primary-600 text-primary-500 bg-white hover:bg-white;
+		@apply bg-white text-neutral-950 border border-neutral-300 hover:bg-neutral-100;
 	}
 	.button--link {
-		@apply text-primary-900 hover:text-primary-950 focus:text-primary-950 dark:text-primary-50 dark:hover:text-primary-100 dark:focus:text-primary-200 inline-flex h-auto! items-center justify-start gap-2 border-0 bg-transparent px-0;
+		@apply text-primary-500 hover:text-primary-600 inline-flex h-auto! items-center justify-start gap-2 border-0 bg-transparent px-0 rounded-none;
 	}
 </style>
