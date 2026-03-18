@@ -28,8 +28,8 @@ export const configData: Config = {
 		'Optimisez vos processus avec l\'automatisation et l\'IA. Services de consultation et développement sur mesure pour PME à Québec. ROI mesurable, solutions pragmatiques.',
 	ogImage: '/og.jpg',
 	logo: {
-		src: '/logo-light.svg',
-		srcDark: '/logo-dark.svg',
+		src: '/logo.png',
+		srcDark: '/logo.png',
 		alt: 'Logo'
 	},
 	canonical: true,

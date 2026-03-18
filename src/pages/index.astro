@@ -16,10 +16,10 @@ const SEO = {
 
 			<!-- ── Hero ── -->
 			<section class="lf-section">
-				<div class="lf-hero">
+				<div class="lf-hero" style="align-items: stretch; height: 700px;">
 
 					<!-- Left: 60% — AI chat -->
-					<div class="lf-card lf-hero-card" style="display: flex; flex-direction: column; gap: 20px;">
+					<div class="lf-card lf-hero-card" style="display: flex; flex-direction: column; gap: 20px; overflow: hidden; min-height: 0;">
 						<h2 style="margin: 0;">Parlez-nous de vos besoins en automatisation!</h2>
 						<div style="flex: 1; min-height: 0; border-radius: 18px; overflow: hidden; border: 1px solid var(--lf-line); display: flex; flex-direction: column;">
 							<ChatWidget client:load />
@@ -27,7 +27,7 @@ const SEO = {
 					</div>
 
 					<!-- Right: 40% -->
-					<div class="lf-panel lf-stack-panel">
+					<div class="lf-panel lf-stack-panel" style="overflow: hidden;">
 						<div class="lf-eyebrow">Ce que la première version démontre</div>
 						<h2 style="margin-top: 12px;">Des résultats concrets, pas du remplissage.</h2>
 						<div class="lf-muted-box" style="margin-top: 16px;">
