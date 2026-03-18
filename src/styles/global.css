@@ -477,24 +477,35 @@ html.disable-transitions *::after {
 .chat-widget {
   display: flex;
   flex-direction: column;
-  height: 460px;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
   background: var(--lf-surface);
 }
 
 .chat-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
+  gap: 9px;
+  padding: 13px 18px;
   background: linear-gradient(180deg, #faf7f2 0%, #f2ebe1 100%);
   border-bottom: 1px solid #ddd4c4;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
   color: #2c1f14;
+  flex-shrink: 0;
+}
+.chat-header > span:nth-child(2) {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  flex-shrink: 0;
+}
+.chat-header-sub {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--lf-muted);
+  letter-spacing: 0.02em;
 }
 .chat-header-dot {
   width: 7px;
@@ -504,6 +515,33 @@ html.disable-transitions *::after {
   box-shadow: 0 0 0 2.5px rgba(90, 158, 114, 0.2);
   flex-shrink: 0;
 }
+.chat-suggestions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  padding: 8px 16px 4px;
+  border-top: 1px solid var(--lf-line);
+}
+.chat-suggestion {
+  display: block;
+  text-align: left;
+  background: var(--lf-surface-muted);
+  border: 1px solid var(--lf-line);
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 0.82rem;
+  color: var(--lf-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  line-height: 1.4;
+  max-width: 85%;
+}
+.chat-suggestion:hover {
+  background: #ede6db;
+  border-color: #c4b49e;
+  color: var(--lf-ink);
+}
 
 .chat-messages {
   flex: 1;
@@ -511,6 +549,7 @@ html.disable-transitions *::after {
   padding: 18px 16px;
   display: flex;
   flex-direction: column;
+
   gap: 12px;
   min-height: 0;
 }

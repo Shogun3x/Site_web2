@@ -29,12 +29,18 @@ function stripThinking(text: string): string {
 	return text.replace(/<think>[\s\S]*?<\/think>/gi, '').trim()
 }
 
+const SUGGESTIONS = [
+	'Je perds mon temps avec des opérations manuelles',
+	'Mes demandes clients arrivent de partout',
+	'Je fais trop de suivis manuels dans Excel',
+]
+
 export default function ChatWidget() {
 	const [messages, setMessages] = useState<Message[]>([
 		{
 			role: 'assistant',
 			content:
-				"Bonjour ! Je suis l'assistant de Lean Flow Systems. Pour mieux comprendre comment on peut vous aider, quel type d'entreprise opérez-vous et quel est votre rôle ?",
+				'Décrivez votre principal défi opérationnel — je vais identifier où une automatisation créerait le plus de valeur pour vous.',
 		},
 	])
 	const [input, setInput] = useState('')
@@ -76,11 +82,12 @@ export default function ChatWidget() {
 		}
 	}
 
-	const sendMessage = async () => {
-		if (!input.trim() || loading) return
+	const sendMessage = async (overrideText?: string) => {
+		const text = overrideText ?? input.trim()
+		if (!text || loading) return
 		setError(null)
 
-		const userMsg: Message = { role: 'user', content: input.trim() }
+		const userMsg: Message = { role: 'user', content: text }
 		const history = [...messages, userMsg]
 		setMessages([...history, { role: 'assistant', content: '' }])
 		setInput('')
@@ -152,11 +159,14 @@ export default function ChatWidget() {
 		}
 	}
 
+	const isIdle = messages.length === 1 && !loading
+
 	return (
 		<div className="chat-widget">
 			<div className="chat-header">
 				<span className="chat-header-dot" />
-				<span>Assistant Lean Flow</span>
+				<span>Diagnostic automatisation</span>
+				<span className="chat-header-sub">Assistant Lean Flow</span>
 			</div>
 
 			<div className="chat-messages" ref={messagesContainerRef}>
@@ -175,8 +185,19 @@ export default function ChatWidget() {
 						</div>
 					</div>
 				))}
+
 				{error && <p className="chat-error">{error}</p>}
 			</div>
+
+			{isIdle && (
+				<div className="chat-suggestions">
+					{SUGGESTIONS.map((s) => (
+						<button key={s} className="chat-suggestion" onClick={() => sendMessage(s)}>
+							{s}
+						</button>
+					))}
+				</div>
+			)}
 
 			<div className="chat-input-row">
 				<input
@@ -185,12 +206,12 @@ export default function ChatWidget() {
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
 					onKeyDown={handleKeyDown}
-					placeholder="Écrivez votre message..."
+					placeholder="Décrivez votre situation..."
 					disabled={loading}
 					className="chat-input"
 				/>
 				<button
-					onClick={sendMessage}
+					onClick={() => sendMessage()}
 					disabled={loading || !input.trim()}
 					className="chat-send"
 					aria-label="Envoyer"
