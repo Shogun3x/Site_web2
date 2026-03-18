@@ -117,7 +117,7 @@ const savedNavActions = navActions.map((action: any) => ({
 			<div class="header__actions">
 				{
 					savedNavActions.map((action) => (
-						<Button link={action.link} classes="header__action w-full" style="neutral">
+						<Button link={action.link} size="sm" classes="header__action w-full !px-6" style="warm">
 							{action.name}
 						</Button>
 					))
