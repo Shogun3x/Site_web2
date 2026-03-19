@@ -6,7 +6,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebSearch",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(curl -s http://localhost:11434/api/tags)",
+      "Bash(python -c \"import sys,json; [print\\(m[''''name'''']\\) for m in json.load\\(sys.stdin\\).get\\(''''models'''',[]\\)]\")"
     ]
   }
 }

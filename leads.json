@@ -73,5 +73,48 @@
       }
     ],
     "timestamp": "2026-03-18T04:51:57.466Z"
+  },
+  {
+    "email": null,
+    "phone": "581-922-4222",
+    "conversation": [
+      {
+        "role": "assistant",
+        "content": "Décrivez votre principal défi opérationnel — je vais identifier où une automatisation créerait le plus de valeur pour vous."
+      },
+      {
+        "role": "user",
+        "content": "Je perds mon temps avec des opérations manuelles"
+      },
+      {
+        "role": "assistant",
+        "content": "Entre quels outils ou étapes ça bloque en ce moment ?"
+      },
+      {
+        "role": "user",
+        "content": "je recois email ou telephone et jentre tout manuellement dans mon crm"
+      },
+      {
+        "role": "assistant",
+        "content": "Tu fais ce suivi dans quel système aujourd'hui ?"
+      },
+      {
+        "role": "user",
+        "content": "hubspot"
+      },
+      {
+        "role": "assistant",
+        "content": "Si je comprends bien, tu perds du temps en entrant manuellement des données dans HubSpot via email ou téléphone.\n\nPeux-tu me donner ton nom, ton entreprise, et soit ton courriel soit ton numéro pour qu'on te recontacte ?"
+      },
+      {
+        "role": "user",
+        "content": "Francis, InnovMetric, 581-922-4222"
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"lead_status\": \"qualified\",\n  \"visitor_type\": \"precise\",\n  \"name\": \"Francis\",\n  \"company\": \"InnovMetric\",\n  \"email\": \"\",\n  \"phone\": \"581-922-4222\",\n  \"main_problem\": \"Entrée manuelle de données dans HubSpot via email ou téléphone\",\n  \"problem_summary\": \"Entrée manuelle de données dans HubSpot via email ou téléphone\",\n  \"tools_used\": [\"HubSpot\"],\n  \"impact\": {\n    \"level\": \"high\",\n    \"notes\": \"Perte de temps et risque d'erreurs liés à l'entrée manuelle\"\n  },\n  \"budget\": {\n    \"mentioned\": false,\n    \"value\": \"\",\n    \"notes\": \"\"\n  },\n  \"follow_up_intent\": \"requested\",\n  \"recommended_next_step\": \"Un expert te contactera pour explorer les solutions d'automatisation\",\n  \"conversation_notes\": \"Le visiteur a fourni son nom, son entreprise et son numéro de téléphone. Le problème principal est l'entrée manuelle de données dans HubSpot.\"\n}\n```"
+      }
+    ],
+    "timestamp": "2026-03-18T23:13:59.867Z"
   }
 ]

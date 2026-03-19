@@ -1,0 +1,50 @@
+[
+  {
+    "lead_status": "partial",
+    "visitor_type": "vague",
+    "name": "",
+    "company": "",
+    "email": "",
+    "phone": "",
+    "main_problem": "",
+    "problem_summary": "",
+    "tools_used": [],
+    "impact": {
+      "level": "unknown",
+      "notes": ""
+    },
+    "budget": {
+      "mentioned": false,
+      "value": "",
+      "notes": ""
+    },
+    "follow_up_intent": "offered",
+    "recommended_next_step": "Proposer un appel technique",
+    "conversation_notes": "Le visiteur a identifié des opérations manuelles comme perte de temps, mais sans précision sur le type d'opération.",
+    "timestamp": "2026-03-18T23:23:24.655Z"
+  },
+  {
+    "lead_status": "partial",
+    "visitor_type": "vague",
+    "name": "",
+    "company": "",
+    "email": "",
+    "phone": "",
+    "main_problem": "Capture et saisie manuelle des leads",
+    "problem_summary": "Friction dans la capture et centralisation des leads via email/téléphone dans le CRM",
+    "tools_used": [],
+    "impact": {
+      "level": "medium",
+      "notes": "Temps de saisie manuelle et risques d'erreur"
+    },
+    "budget": {
+      "mentioned": false,
+      "value": "",
+      "notes": ""
+    },
+    "follow_up_intent": "offered",
+    "recommended_next_step": "Proposer un appel technique",
+    "conversation_notes": "Le visiteur a confirmé le problème mais ne fournit pas encore de détails ou de contacts. La frustation semble principalement liée à la saisie manuelle des données.",
+    "timestamp": "2026-03-18T23:24:43.056Z"
+  }
+]
